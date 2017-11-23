@@ -3,6 +3,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
+
+
 import {setRecipes} from './../actions';
 
 class SearchRecipes extends React.Component{
@@ -40,11 +42,11 @@ class SearchRecipes extends React.Component{
         <form className="form-inline justify-content-center" onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label htmlFor="staticEmail2" className="sr-only">Email</label>
-          <input type="text" className="form-control" placeholder="ingredients" ref='ingredients'/>
+          <input type="text" className="form-control" placeholder="ingredients" defaultValue='chicken' ref='ingredients'/>
           </div>
           <div className="form-group mx-sm-3">
             <label htmlFor="inputPassword2" className="sr-only">Password</label>
-          <input type="text" className="form-control"  placeholder="recipe" ref='dish' />
+          <input type="text" className="form-control"  placeholder="recipe" defaultValue='pizza' ref='dish' />
           </div>
           <button type="submit" className="btn btn-primary">Search</button>
         </form>
